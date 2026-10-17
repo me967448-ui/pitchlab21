@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#17142d" />
+  <meta name="description" content="PitchLab 21 — a PES 2021 player database, scouting and squad-building toolkit." />
+  <title>PitchLab 21 — PES 2021 Database</title>
+  <link rel="stylesheet" href="styles.css?v=2026-10-17-master-league-2" />
+</head>
+<body>
+  <div id="app">
+    <main style="max-width:900px;margin:40px auto;padding:24px;font-family:Arial,sans-serif;color:#eee;background:#211b38;border-radius:16px">
+      <h1 style="margin-top:0">PitchLab 21 is starting…</h1>
+      <p>Loading the PES 2021 database interface. If this message stays here, the diagnostic below will show the startup error.</p>
+    </main>
+  </div>
+  <script>
+    window.PITCHLAB_BUILD_ID = '2026-10-17-pesmaster-player-catalog-3';
+    (function () {
+      function showStartupError(title, detail) {
+        var app = document.getElementById('app');
+        if (!app || window.__PITCHLAB_APP_READY__) return;
+        app.innerHTML = '';
+        var box = document.createElement('main');
+        box.style.cssText = 'max-width:900px;margin:36px auto;padding:24px;font:16px/1.55 Arial,sans-serif;color:#eee;background:#211b38;border:1px solid #594c7e;border-radius:16px';
+        var h = document.createElement('h1'); h.textContent = title; h.style.color = '#ffb4b4';
+        var p = document.createElement('p'); p.textContent = 'PitchLab 21 could not finish starting. Make sure you extracted the entire ZIP and opened START-PITCHLAB.bat. The detailed error is below.';
+        var pre = document.createElement('pre'); pre.textContent = 'Build: ' + (window.PITCHLAB_BUILD_ID || 'unknown') + '\n\n' + String(detail || 'No additional error details were provided.'); pre.style.cssText = 'white-space:pre-wrap;overflow-wrap:anywhere;background:#151225;padding:12px;border-radius:8px';
+        var b = document.createElement('button'); b.textContent = 'Try again'; b.style.cssText = 'padding:10px 16px;border:0;border-radius:8px;cursor:pointer'; b.onclick = function(){ location.reload(); };
+        box.append(h,p,pre,b); app.appendChild(box);
+      }
+      window.addEventListener('error', function (event) {
+        if (event instanceof ErrorEvent) showStartupError('PitchLab 21 startup error', (event.message || 'JavaScript error') + (event.filename ? '\n' + event.filename + ':' + event.lineno : '') + (event.error && event.error.stack ? '\n' + event.error.stack : ''));
+        else if (event.target && event.target.tagName === 'SCRIPT') showStartupError('A required JavaScript file could not load', event.target.src || 'Unknown script file');
+      }, true);
+      window.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function () { if (!window.__PITCHLAB_APP_READY__) showStartupError('PitchLab 21 did not finish starting', 'The app script did not complete its initial render. Check that app.js, data.js, data/managers-tactics.js, and data/league-catalog.js exist next to the site and that you extracted the ZIP fully.'); }, 12000);
+      });
+    })();
+  </script>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="data.js?v=2026-10-17-pesmaster-player-catalog-2"></script>
+  <script src="data/managers-tactics.js?v=2026-10-17-master-league-1"></script>
+  <script src="data/league-catalog.js?v=2026-10-17-pesmaster-player-catalog-2"></script>
+  <script src="app.js?v=2026-10-17-master-league-3"></script>
+</body>
+</html>

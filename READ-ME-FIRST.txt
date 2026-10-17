@@ -1,0 +1,35 @@
+PITCHLAB 21 - FIRST RUN
+=======================
+
+1. RIGHT-CLICK the downloaded ZIP and choose Extract All. Do not run BAT files while they are still inside the ZIP preview.
+2. Open the extracted pitchlab21 folder.
+3. Double-click START-PITCHLAB.bat. Keep its black terminal window open while using the site.
+4. If the site opens but remains on the startup screen, read the visible diagnostic error.
+5. If the server cannot start for any reason, double-click OPEN-LOCAL-FILE.bat to open the bundled page in your browser. Direct-file mode has limited catalogue-sync features.
+
+The home page starts with a small sample. The full PESMASTER player list loads only when you open Players, Compare, Teams, Leagues, a player/team page, or Squad Builder. Team and coach/tactics files are also loaded only when you enter their sections.
+
+If START-PITCHLAB.bat prints a URL (such as http://127.0.0.1:8001/), copy that exact URL into Chrome. Never assume port 8000 is the correct one.
+
+
+STARTUP FIX (latest build)
+--------------------------
+This build fixes the startup ReferenceError involving LEAGUE_CANONICAL_BY_KEY by initializing the league-name lookup before any saved or bundled players are normalized. If you previously extracted another version, extract this ZIP into a NEW folder and run this folder's START-PITCHLAB.bat.
+
+
+Startup error hotfix 2026-10-16-tdz-hotfix-03 (included in this build):
+- This build uses an initialized `var` Map for league names to avoid the reported temporal-dead-zone crash.
+- app.js has a versioned URL, and the local server now sends no-store headers.
+- The site build identifier is 2026-10-17-pesmaster-player-catalog-3. The app script uses a separate cache version so updates are picked up after extraction.
+- Extract this ZIP into a NEW folder and launch that folder's START-PITCHLAB.bat. Do not run the old extracted folder.
+
+Progress display fix 2026-10-16-progress-fix-04 (included in this build):
+- Corrects download progress when the browser transparently decompresses the data stream.
+- If the received size does not match the advertised file size, the progress display switches to an unknown-size indicator instead of showing an impossible ratio.
+- The server may select another port when 8000 is occupied. Use the exact URL printed in its console window.
+
+Official league teams fix 2026-10-16-league-teams-fix-05:
+- Includes the verified PESMASTER PES 2021 team catalogue for all 39 competitions.
+- League membership is taken from each official competition page's team-profile links; team lists are not inferred from the small sample of player records.
+- Classic Teams is included as an official competition with no team links published on its PESMASTER 2021 page.
+- Refresh official catalogue is available on the Leagues page if PESMASTER changes its pages.

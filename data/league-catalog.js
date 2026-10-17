@@ -1,0 +1,123 @@
+/* PESMASTER PES 2021 official competition index. Source count: 39 distinct competition IDs. */
+window.PITCHLAB_LEAGUE_CATALOG = [
+  "National Teams Europe",
+  "English League",
+  "Serie A TIM",
+  "Spanish League",
+  "Ligue 1 Conforama",
+  "National Teams North & Central America",
+  "Spor Toto Süper Lig",
+  "English 2nd Division",
+  "Campeonato Brasileiro Série A",
+  "Eredivisie",
+  "Other European Leagues",
+  "National Teams Africa",
+  "Superliga Quilmes Clásica",
+  "Liga NOS",
+  "Russian Premier Liga",
+  "Jupiler Pro League",
+  "AFC Champions League",
+  "Classic Teams",
+  "Domino’s Ligue 2",
+  "Thai League",
+  "Chinese Super League",
+  "Ladbrokes Premiership",
+  "National Teams Asia",
+  "Campeonato AFP Planvital",
+  "Colombian League",
+  "3F Superliga",
+  "Raiffeisen Super League",
+  "PAS League",
+  "PEU League",
+  "Other Teams (Latin America)",
+  "PLA League",
+  "Other Teams (Africa)",
+  "Campeonato Brasileiro Série B",
+  "Serie BKT",
+  "Spanish 2nd Division",
+  "J2 League",
+  "Other Teams (Asia)",
+  "J1 League",
+  "National Teams South America"
+];
+
+window.PITCHLAB_LEAGUE_PESMASTER_IDS = {
+  "National Teams Europe": 33,
+  "English League": 9,
+  "Serie A TIM": 10,
+  "Spanish League": 11,
+  "Ligue 1 Conforama": 12,
+  "National Teams North & Central America": 34,
+  "Spor Toto Süper Lig": 120,
+  "English 2nd Division": 66,
+  "Campeonato Brasileiro Série A": 21,
+  "Eredivisie": 13,
+  "Other European Leagues": 204,
+  "National Teams Africa": 36,
+  "Superliga Quilmes Clásica": 22,
+  "Liga NOS": 14,
+  "Russian Premier Liga": 114,
+  "Jupiler Pro League": 111,
+  "AFC Champions League": 8,
+  "Classic Teams": 202,
+  "Domino’s Ligue 2": 68,
+  "Thai League": 139,
+  "Chinese Super League": 125,
+  "Ladbrokes Premiership": 137,
+  "National Teams Asia": 35,
+  "Campeonato AFP Planvital": 23,
+  "Colombian League": 122,
+  "3F Superliga": 128,
+  "Raiffeisen Super League": 117,
+  "PAS League": 41,
+  "PEU League": 39,
+  "Other Teams (Latin America)": 212,
+  "PLA League": 40,
+  "Other Teams (Africa)": 214,
+  "Campeonato Brasileiro Série B": 90,
+  "Serie BKT": 69,
+  "Spanish 2nd Division": 67,
+  "J2 League": 51,
+  "Other Teams (Asia)": 206,
+  "J1 League": 50,
+  "National Teams South America": 37
+};
+// Historical aliases collapse to the single display label above, while retaining the official PESMASTER ID.
+window.PITCHLAB_LEAGUE_PESMASTER_IDS["Other European Teams"] = 204;
+window.PITCHLAB_LEAGUE_PESMASTER_IDS["Ligue 1 Uber Eats"] = 12;
+window.PITCHLAB_LEAGUE_PESMASTER_IDS["(1) Ligue 1 Conforama"] = 12;
+
+window.PITCHLAB_LEAGUE_PESMASTER_URLS = {
+  "PAS League": "https://www.pesmaster.com/pas-league/pes-2021/league/41/",
+  "English League": "https://www.pesmaster.com/english-league/pes-2021/league/9/",
+  "Serie A TIM": "https://www.pesmaster.com/serie-a-tim/pes-2021/league/10/",
+  "Spanish League": "https://www.pesmaster.com/spanish-league/pes-2021/league/11/",
+  "Ligue 1 Conforama": "https://www.pesmaster.com/ligue-1-conforama/pes-2021/league/12/",
+  "Other European Leagues": "https://www.pesmaster.com/other-european-teams/pes-2021/league/204/"
+};
+
+/* Verified PAS League team catalog. These are official PESMASTER team page IDs/slugs; rosters still come from the imported player dataset. */
+window.PITCHLAB_STATIC_TEAMS_BY_LEAGUE = {
+  "PAS League": [
+    {"name": "Almorfida", "teamId": "2407", "slug": "almorfida", "sourceUrl": "https://www.pesmaster.com/almorfida/pes-2021/team/2407/"},
+    {"name": "Altiplano Bunan", "teamId": "2689", "slug": "altiplano-bunan", "sourceUrl": "https://www.pesmaster.com/altiplano-bunan/pes-2021/team/2689/"},
+    {"name": "Bharshapur", "teamId": "2697", "slug": "bharshapur", "sourceUrl": "https://www.pesmaster.com/bharshapur/pes-2021/team/2697/"},
+    {"name": "Cersipla Jakarta", "teamId": "2690", "slug": "cersipla-jakarta", "sourceUrl": "https://www.pesmaster.com/cersipla-jakarta/pes-2021/team/2690/"},
+    {"name": "Cheonsang Teayang", "teamId": "2401", "slug": "cheonsang-teayang", "sourceUrl": "https://www.pesmaster.com/cheonsang-teayang/pes-2021/team/2401/"},
+    {"name": "Fontana City", "teamId": "2691", "slug": "fontana-city", "sourceUrl": "https://www.pesmaster.com/fontana-city/pes-2021/team/2691/"},
+    {"name": "Haiphong Athletic", "teamId": "2693", "slug": "haiphong-athletic", "sourceUrl": "https://www.pesmaster.com/haiphong-athletic/pes-2021/team/2693/"},
+    {"name": "Huangying Qingshun", "teamId": "2399", "slug": "huangying-qingshun", "sourceUrl": "https://www.pesmaster.com/huangying-qingshun/pes-2021/team/2399/"},
+    {"name": "Kalaquisong City", "teamId": "2398", "slug": "kalaquisong-city", "sourceUrl": "https://www.pesmaster.com/kalaquisong-city/pes-2021/team/2398/"},
+    {"name": "Kharimsharjah", "teamId": "2408", "slug": "kharimsharjah", "sourceUrl": "https://www.pesmaster.com/kharimsharjah/pes-2021/team/2408/"},
+    {"name": "Krungthep United", "teamId": "2692", "slug": "krungthep-united", "sourceUrl": "https://www.pesmaster.com/krungthep-united/pes-2021/team/2692/"},
+    {"name": "Moratyadi", "teamId": "2406", "slug": "moratyadi", "sourceUrl": "https://www.pesmaster.com/moratyadi/pes-2021/team/2406/"},
+    {"name": "Mouqabaram", "teamId": "2698", "slug": "mouqabaram", "sourceUrl": "https://www.pesmaster.com/mouqabaram/pes-2021/team/2698/"},
+    {"name": "Qatorejan", "teamId": "2404", "slug": "qatorejan", "sourceUrl": "https://www.pesmaster.com/qatorejan/pes-2021/team/2404/"},
+    {"name": "Qaxoqavoiy", "teamId": "2409", "slug": "qaxoqavoiy", "sourceUrl": "https://www.pesmaster.com/qaxoqavoiy/pes-2021/team/2409/"},
+    {"name": "Sayramskal", "teamId": "2402", "slug": "sayramskal", "sourceUrl": "https://www.pesmaster.com/sayramskal/pes-2021/team/2402/"},
+    {"name": "Sujung Bada", "teamId": "2400", "slug": "sujung-bada", "sourceUrl": "https://www.pesmaster.com/sujung-bada/pes-2021/team/2400/"},
+    {"name": "WE United", "teamId": "200", "slug": "we-united", "sourceUrl": "https://www.pesmaster.com/we-united/pes-2021/team/200/"},
+    {"name": "Yaraydeccah", "teamId": "2405", "slug": "yaraydeccah", "sourceUrl": "https://www.pesmaster.com/yaraydeccah/pes-2021/team/2405/"},
+    {"name": "Zangrhan", "teamId": "2403", "slug": "zangrhan", "sourceUrl": "https://www.pesmaster.com/zangrhan/pes-2021/team/2403/"}
+  ]
+};
